@@ -38,7 +38,7 @@ Promise.prototype.then = function(onFulfilled, onRejected) {
     if (this.state === PENDING) {
       this.callbacks.push(callback)
     } else {
-      setTimeout(() => handleCallback(callback, this.state, this.result), 0)
+      queueMicrotask(() => handleCallback(callback, this.state, this.result), 0)
     }
   })
 }
@@ -64,7 +64,7 @@ const transition = (promise, state, result) => {
   if (promise.state !== PENDING) return
   promise.state = state
   promise.result = result
-  setTimeout(() => handleCallbacks(promise.callbacks, state, result), 0)
+  queueMicrotask(() => handleCallbacks(promise.callbacks, state, result))
 }
 
 const resolvePromise = (promise, result, resolve, reject) => {
