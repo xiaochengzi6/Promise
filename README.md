@@ -17,22 +17,22 @@
 
 `promise.all`: 用于处理多 promise （由于是并发执行所以每个 promise 不存在联系）的方法
 
-#### 参数要求
+**参数要求**
 1. `promise.all(iterators)` 参数 `iterators` 是一个可迭代对象，数组、Set等，通常是一个数组类型
 2. 没有参数会抛错
 3. 参数为空返回 `promsie.resolve()`
 
-#### 特点：
+**特点**
 1. 可迭代对象内所有的 `promise` 全部执行成功也就是状态都为 `resolve` 的结果，`promise.all` 返回 `状态: Fulfilled` 的 promise
 2. 存在失败，就会返回首个状态为 `rejected` 的 promise
 
 ### `promise.race(iterators)`
 用于判断最先执行完的 `promise`
 
-#### 参数要求
+**参数要求**
 和 promise.all 类似
 
-#### 特点
+**特点**
 返回最先解决或者是最先拒绝的那个
 
 ### `promise.finally(callback)`
