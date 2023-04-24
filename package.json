@@ -1,11 +1,17 @@
 {
   "name": "promise",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
     "promises-aplus-tests": "^2.1.2"
   },
+  "author": {
+    "name": "小橙子",
+    "email": "2742217795@qq.com",
+    "url": "https://github.com/xiaochengzi6"
+  },
+  "type": "module",
   "scripts": {
     "test": "promises-aplus-tests test.js"
   }
