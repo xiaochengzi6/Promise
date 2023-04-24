@@ -11,8 +11,7 @@
     "email": "2742217795@qq.com",
     "url": "https://github.com/xiaochengzi6"
   },
-  "type": "module",
   "scripts": {
-    "test": "promises-aplus-tests test.js"
+    "test": "promises-aplus-tests test/promise.test.js"
   }
 }
