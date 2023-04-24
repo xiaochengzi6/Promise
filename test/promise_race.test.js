@@ -1,4 +1,4 @@
-const Promise = require('./Promise_race')
+const Promise = require('../src/race')
 const p1 = new Promise((resolve, reject)=>{
   setTimeout(resolve, 400, '1')
 })

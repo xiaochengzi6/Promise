@@ -1,6 +1,6 @@
 // yarn run test 
 // 检测promise 是否符合规范但不包括其他功能。
-const Promise = require("../src/promise");
+const Promise = require("../src/promise")
 
 var promisesAplusTests = require("promises-aplus-tests");
 
