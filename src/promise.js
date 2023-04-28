@@ -38,7 +38,7 @@ Promise.prototype.then = function(onFulfilled, onRejected) {
     if (this.state === PENDING) {
       this.callbacks.push(callback)
     } else {
-      queueMicrotask(() => handleCallback(callback, this.state, this.result), 0)
+      queueMicrotask(() => handleCallback(callback, this.state, this.result))
     }
   })
 }
