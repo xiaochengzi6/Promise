@@ -21,7 +21,7 @@ Promise.prototype.any = function (iterator) {
     }
     const length = iterator.length
     const onFulfilled = value => {
-      resolve(value)
+      return resolve(value)
     }
 
     const onRejected = reason => {
@@ -32,7 +32,7 @@ Promise.prototype.any = function (iterator) {
         if(AggregateError){
           return reject(new AggregateError(rejecteds))
         }
-        reject(rejecteds)
+        return reject(rejecteds)
       }
     }
 
